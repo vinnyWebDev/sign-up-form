@@ -3,47 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="content">
-      <div class="hero">
+    <!--Content which will display on left side of screen-->
+    <div class="leftDiv">
+      <div class="logoDiv">
+        <img src="./images/odin-lined.png" alt="logo depicting viking" />
+        <p>ODIN</p>
+      </div>
+    </div>
+
+    <!--Content which will display on right side of screen-->
+    <div class="rightDiv">
+      <div class="heroDiv">
         <p>
           This is not a real online service! You know you need something<br />
-          like this in your life to help you realise your deepest dreams.
-          <br />Sign up now to get started.<br /><br />
-          You know you want to.
+          like this in your life to help you realise your deepest drems<br />
+          Sign up <em>now</em> to get started<br /><br />You <em>know</em> you
+          want to.
         </p>
       </div>
-      <div class="formSection">
-        <h2>Let's do this!</h2>
-        <form class="formFlex" action="vinny.com" method="post">
-          <div class="formFlexCol">
-            <label for="first_name">FIRST NAME</label>
-            <input type="text" id="first_name" />
+      <div>
+        <form method="post">
+          <fieldset class="formDiv">
+            <h3 class="legend">Let's do this!</h3>
+            <div class="userForm">
+              <!--Col 1-->
+              <div class="formCol">
+                <label for="first-name">FIRST NAME</label>
+                <input type="text" id="first-name" />
 
-            <label for="last_name">LAST NAME</label>
-            <input type="text" id="last_name" />
+                <label for="email">EMAIL</label>
+                <input type="text" id="email" />
 
-            <label for="first_name">EMAIL</label>
-            <input type="text" id="email" />
-          </div>
-          <div class="formFlexCol">
-            <label for="password">PASSWORD</label>
-            <input type="text" id="password" />
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" required />
+              </div>
+              <!--Col 2-->
+              <div class="formCol">
+                <label for="last-name">LAST NAME</label>
+                <input type="text" id="last-name" />
 
-            <label for="phone_number">PHONE NUMBER</label>
-            <input type="text" id="phone_number" />
+                <label for="phone">PHONE NUMBER</label>
+                <input type="text" id="phone" />
 
-            <label for="passwordConf">CONFIRM PASSWORD</label>
-            <input type="text" id="passwordConf" />
-          </div>
+                <label for="passwordConf">CONFIRM PASSWORD</label>
+                <input type="password" id="passwordConf" required />
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit">Create Account</button>
         </form>
       </div>
-      <div class="btnSection">
-        <button class="btn">Create Account</button>
-        <p>Already have an account? <a href="#">Log in</a></p>
+      <div class="submitDiv">
+        <p class="loginText">Already have an account? <a href="#">Log in</a></p>
       </div>
     </div>
   </body>
